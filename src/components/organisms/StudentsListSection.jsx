@@ -10,17 +10,20 @@ function studentListSection(){
     return(
         <div id="cardContainter">
             {
-                let current = studentList.getTail()
-                for(let i=0; i<studentList.getSize();i++){
-                    const studentname= current.getData().getStudname()
+                function setData(){
+                    let current = studentList.getTail()
+                    for(let i=0; i<studentList.getSize();i++){
+                        const studentname= current.getData().getStudname()
+                        let studentlastname = current.getData().getStudLastname()
+                        const studmail = current.getData().getStudmail()
+                        const bday = current.getData().getStudbirthday()
+                        const tutor = current.getData().getStudTutor()
+                        const tutornum = current.getData().getStudTutorcontact()
+                        
+                        current=current.getPrevious()
+                        
+                    }
                     <Output></Output>
-                    const studentlastname = current.getData().getStudLastname()
-                    const studmail = current.getData().getStudmail()
-                    const bday = current.getData().getStudbirthday()
-                    const tutor = current.getData().getStudTutor()
-                    const tutornum = current.getData().getStudTutorcontact()
-
-                    current=current.getPrevious()
                 }
 
             }
