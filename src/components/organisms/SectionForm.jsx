@@ -2,7 +2,9 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import Field from "../molecules/Field";
 import Button from "../atoms/Button";
-import './SectionLogin.css'
+import './SectionForm.css'
+import { Student } from "../../data/Student";
+import studentList from "../../data/Dependencies";
 
 function SectionForm() {
     const [nombreAlumno, setnombreAlumnos] = useState('')
@@ -11,7 +13,6 @@ function SectionForm() {
     const [fechaNacimiento, setfechaNacimiento] = useState('')
     const [tutor, settutor] = useState('')
     const [numeroTutor, setnumeroTutor] = useState ('')
-
 
     const handlerClick = (event) => {
         Swal.fire({
@@ -22,7 +23,19 @@ function SectionForm() {
             imageHeight: 250,
             imageAlt: "React Image"
         });
+        let student = new Student 
+        student.funciona()
+        student.setStudname(nombreAlumno)
+        student.setStudlastname(apellidos)
+        student.setStudemail(email)
+        student.setStudbirthday(fechaNacimiento)
+        student.setStudTutor(tutor)
+        student.setStudTutorcontact(numeroTutor)
+        console.log("se creo un estudiante: "+student.getStudname())
+        studentList.addElement(student)
+        console.log(studentList.getSize())
     }
+
 
     return (
         <div id="login_section">

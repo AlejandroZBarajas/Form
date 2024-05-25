@@ -3,14 +3,16 @@ import styled from "styled-components";
 const ButtonStyled = styled.button`
     width: 80%;
     height: 50px;
-    background-color: #0308a3;
+    margin-top:15px;
+    margin-bottom:15px;
+    background-color: #a54aff;
     border-radius: 5px;
     color: white;
     font-size: 18px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 2px 0px rgba(5,5,5,0);  
 
     &:hover {
-        background-color: #5257de;
+        background-color:#801da7;
     }
 `;
 
