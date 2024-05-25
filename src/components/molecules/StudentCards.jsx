@@ -1,10 +1,11 @@
-// StudentCard.js
+import StudentName from '../atoms/StudentNames';
 import React from 'react';
 
 const StudentCard = ({ name, lastname, email, birthday, tutor, tutorContact }) => {
     return (
         <div className="student">
-            <p>Name: {name} {lastname}</p>
+            <StudentName>{props.names}</StudentName>
+            
             <p>Email: {email}</p>
             <p>Birthday: {birthday}</p>
             <p>Tutor: {tutor}</p>
