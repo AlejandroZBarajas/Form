@@ -9,19 +9,17 @@ import StudentCard from "../molecules/StudentCards";
 import './StudentListSection'
 
 function StudentListSection(){
-        let current = studentList.getTail()
-        for(let i=0; i<studentList.getSize();i++){
-            let student
-            student.name= current.getData().getStudname()
-            student.lastname = current.getData().getStudLastname()
-            student.mail = current.getData().getStudmail()
-            student.bday = current.getData().getStudbirthday()
-            student.tutor = current.getData().getStudTutor()
-            student.tutornum = current.getData().getStudTutorcontact()
 
-            auxArray.push(student)
+    
+        let current = studentList.getTail()
+        for(let i=0; i<studentList.getSize();i++){          
+            auxArray.push(current)
             current=current.getPrevious()          
         }
+
+
+
+    
     return(
         <div id="cardContainter">
             {
@@ -29,6 +27,9 @@ function StudentListSection(){
             }
         </div>
     )
+
+
+
 }
 
 export default StudentListSection

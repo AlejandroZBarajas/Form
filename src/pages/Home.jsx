@@ -1,12 +1,13 @@
 import SectionForm from "../components/organisms/SectionForm";
 
-import studentListSection from "../components/organisms/StudentsListSection";
+import StudentListSection from "../components/organisms/StudentListSection";
 import './Home.css'
 function Home() {
     return ( 
         <div id="login-home">
             <SectionForm/>
-            
+            <StudentListSection></StudentListSection>
+
         </div>
      );
 }

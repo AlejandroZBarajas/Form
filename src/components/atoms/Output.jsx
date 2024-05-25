@@ -2,7 +2,7 @@
 
 function Output(props){
     return(
-        <Output>{props.name}</Output>
+        <Output>{props}</Output>
     )
 }
 
