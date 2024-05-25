@@ -33,7 +33,6 @@ function SectionForm() {
         student.setStudTutorcontact(numeroTutor)
         console.log("se creo un estudiante: "+student.getStudname())
         studentList.addElement(student)
-        console.log(studentList.getSize())
     }
 
 

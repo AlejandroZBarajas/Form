@@ -30,4 +30,12 @@ export class LinkedList{
     funca(){
         console.log("tenemos lista chavos!")
     }
+
+    getHead(){
+        return this.#head
+    }
+
+    getTail(){
+        return this.#tail
+    }
 }
