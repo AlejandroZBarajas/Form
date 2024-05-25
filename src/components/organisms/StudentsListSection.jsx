@@ -11,15 +11,18 @@ function studentListSection(){
         <div id="cardContainter">
             {
                 function setData(){
+                    const alumnData=[]
                     let current = studentList.getTail()
                     for(let i=0; i<studentList.getSize();i++){
+                        let alumno
                         const studentname= current.getData().getStudname()
                         let studentlastname = current.getData().getStudLastname()
                         const studmail = current.getData().getStudmail()
                         const bday = current.getData().getStudbirthday()
                         const tutor = current.getData().getStudTutor()
                         const tutornum = current.getData().getStudTutorcontact()
-                        
+                        alumno
+                        alumnData.push(alumno)
                         current=current.getPrevious()
                         
                     }
